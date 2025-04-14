@@ -1,4 +1,2 @@
-dizi-robot/
-├── main.py
-├── requirements.txt
-└── .env
+python-telegram-bot==20.7
+python-dotenv
