@@ -99,16 +99,4 @@ async def main():
     app.add_handler(CallbackQueryHandler(check_membership, pattern='^check$'))
 
     print("🤖 ربات آماده‌ست...")
-    await app.run_polling()
-
-if __name__ == "__main__":
-    import asyncio
-    try:
-        asyncio.run(main())  # برای اجرا در محیط‌های معمولی
-    except RuntimeError as e:
-        if str(e).startswith("This event loop is already running"):  # در صورتی که لوپ در حال اجراست
-            loop = asyncio.get_event_loop()
-            loop.create_task(main())
-            loop.run_forever()
-        else:
-            raise
+ application.run_polling()
