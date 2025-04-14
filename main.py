@@ -99,4 +99,4 @@ async def main():
     app.add_handler(CallbackQueryHandler(check_membership, pattern='^check$'))
 
     print("🤖 ربات آماده‌ست...")
- application.run_polling()
+    await app.run_polling()
